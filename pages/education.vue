@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header />
-     <div class="container">
-       <h1>Education</h1>
-       <img
+    <div class="container">
+      <h1>Education</h1>
+      <img
         src="~/assets/diploma.jpg"
         height="40%"
         width="40%"
@@ -17,14 +17,11 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-        here
+          here
         </a>
-        and entering the code <br/>
-        <u type="text" id="code">191X-MQ4L-MGYH</u>
-        <button @click="copyToClipboard">Copy code to clipboard</button>
+        and entering the code
+        <u id="code" type="text">191X-MQ4L-MGYH</u>
       </p>
-      <p> I've noticed the code cannot be copied and pasted onto the linked website,
-      it must be typed. Sorry!</p>
     </div>
   </div>
 </template>
@@ -32,7 +29,10 @@
 <script>
 import Header from '../components/Header.vue'
 export default {
-  name: 'education',
+  name: 'Education',
+  components: {
+    Header
+  },
   data: () => {
     return {
       name: 'Matthew\'s Diploma'
@@ -50,14 +50,11 @@ export default {
       document.execCommand('copy')
       document.body.removeChild(el)
     }
-  },
-  components: {
-    Header
   }
 }
 </script>
 
-<style>
+<style scoped>
 .container{
   display:flex;
   flex-direction:column;

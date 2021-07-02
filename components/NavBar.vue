@@ -4,25 +4,29 @@
       <NuxtLink to="/">
         Home page
       </NuxtLink>
-      <NuxtLink to="/first-page">
-        First Page
-      </NuxtLink>
       <NuxtLink to="/education">
         Education
+      </NuxtLink>
+      <NuxtLink to="/interests">
+        Interests
       </NuxtLink>
     </div>
     <div class="links">
       <a href="https://www.linkedin.com/in/mahoney-matthew">
         <img
           src="~/assets/linkedin-logo.png"
-          height= "40"
-          width= "40"/>
+          height="40"
+          width="40"
+        >
+        </img>
       </a>
       <a href="https://github.com/MahoneyMA">
         <img
           src="~/assets/github-logo.png"
-          height= "40"
-          width= "40"/>
+          height="40"
+          width="40"
+        >
+        </img>
       </a>
     </div>
   </div>

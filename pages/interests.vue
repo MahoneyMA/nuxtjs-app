@@ -1,23 +1,45 @@
 <template>
   <div>
-    <Header/>
+    <Header />
     <div class="container">
-      <p>hi</p>
+      <div v-for="game in games" :key="game.match_id">
+        <GameCard
+          :game="game"
+          :heroes="heroes"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import GameCard from '../components/GameCard'
 export default {
-  name: 'first-page'
+  name: 'Interests',
+  components: {
+    GameCard
+  },
+  data () {
+    return {
+      games: [],
+      heroes: [],
+      url: 'https://api.opendota.com/api/players/103266538/matches?limit=5&offset=0'
+    }
+  },
+  async fetch () {
+    this.games = await fetch(this.url).then(res => res.json())
+  }
 }
+
 </script>
 
 <style scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
+  display: block;
+  width: 60%;
+  padding: 30px;
   justify-content: center;
   align-items: center;
   text-align: center;
