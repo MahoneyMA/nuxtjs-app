@@ -2,7 +2,22 @@
   <div>
     <Header />
     <div class="container">
-      hi
+      <p class="heading2Xl">
+        Hi I'm Matthew.
+      </p>
+      <p class="headingLg">
+        I am a recent college graduate and aspiring sofware engineer and
+        web developer. I am currently updating this website as a means of
+        improving my web development skills and centralizing a place where I
+        can explore and enjoy some of my hobbies.
+      </p>
+      <p class="headingLg">
+        If you are a potential employer, You can find more details or contact
+        me on
+        <a href="https://www.linkedin.com/in/matthew-mahoney-4275b6190/">LinkedIn</a>
+        or
+        <a href="https://github.com/MahoneyMA"> Github</a>
+      </p>
     </div>
   </div>
 </template>
@@ -14,13 +29,15 @@ export default {}
 <style scoped>
 .container {
   margin: 0 auto;
+  width:70%;
   min-height: 100vh;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
-
+.container a{
+  color:inherit;
+}
 .title {
   font-family:
     'Quicksand',
@@ -49,5 +66,31 @@ export default {}
 
 .links {
   padding-top: 15px;
+}
+.heading2Xl {
+  font-size: max(2rem,30px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingXl {
+  font-size: max(1.7rem, 28px);
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.headingLg {
+  font-size: max(1.5rem,26px);
+  line-height: 1.4;
+  margin: 1rem 0;
+}
+
+.headingMd {
+  font-size: max(1rem, 24px);
+  line-height: 1.5;
 }
 </style>

@@ -2,11 +2,16 @@
   <div>
     <Header />
     <div class="container">
-      <div v-for="game in games" :key="game.match_id">
-        <GameCard
-          :game="game"
-          :heroes="heroes"
-        />
+      <div v-if="$fetchState.pending">
+        Loading...
+      </div>
+      <div v-else>
+        <div v-for="game in games" :key="game.match_id">
+          <GameCard
+            :game="game"
+            :hero="heroes.find(element => element.id === game.hero_id)"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -28,7 +33,9 @@ export default {
   },
   async fetch () {
     this.games = await fetch(this.url).then(res => res.json())
-  }
+    this.heroes = await fetch('https://api.opendota.com/api/heroes').then(res => res.json())
+  },
+  fetchOnServer: false
 }
 
 </script>

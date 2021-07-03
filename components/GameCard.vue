@@ -9,12 +9,12 @@
         </p>
         <p v-else>LOSE</p>
       </a>
-      Hero: {{ heroes.localized_name }}
+      Hero: {{ hero.localized_name }}
       KDA: {{ game.kills }}/{{ game.deaths }}/{{ game.assists }}
     </button>
     <transition name="ease-out">
       <div v-show="isOpen" id="game.match_id" class="panel">
-        <div> {{ new Date(game.start_time * 1000).toString() }}</div>
+        <div> {{ new Date(game.start_time * 1000).toLocaleString() }}</div>
         <div>
           Match Length: {{ parseInt(game.duration/60,10) }}:
           <span v-if="game.duration%60 < 10">
@@ -35,8 +35,8 @@ export default {
       type: Object,
       required: true
     },
-    heroes: {
-      type: Array,
+    hero: {
+      type: Object,
       required: true
     }
   },
