@@ -23,7 +23,18 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      title: 'Matthew\'s nuxt website'
+    }
+  },
+  head () {
+    return {
+      title: this.title
+    }
+  }
+}
 </script>
 
 <style scoped>

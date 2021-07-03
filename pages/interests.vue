@@ -26,9 +26,15 @@ export default {
   },
   data () {
     return {
+      title: 'Matthew Mahoney | Interests',
       games: [],
       heroes: [],
       url: 'https://api.opendota.com/api/players/103266538/matches?limit=5&offset=0'
+    }
+  },
+  head () {
+    return {
+      title: this.title
     }
   },
   async fetch () {

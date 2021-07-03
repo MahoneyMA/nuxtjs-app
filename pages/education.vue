@@ -7,7 +7,7 @@
         src="~/assets/diploma.jpg"
         height="40%"
         width="40%"
-        alt="Matthew's diploma"
+        :alt=name
       >
       </img>
       <p>
@@ -33,9 +33,15 @@ export default {
   components: {
     Header
   },
-  data: () => {
+  data () {
     return {
-      name: 'Matthew\'s Diploma'
+      name: 'Matthew\'s Diploma',
+      title: 'Matthew Mahoney | Education'
+    }
+  },
+  head () {
+    return {
+      title: this.title
     }
   },
   methods: {
