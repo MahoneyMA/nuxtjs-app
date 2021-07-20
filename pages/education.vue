@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <div class="container">
       <h1>Education</h1>
       <img
@@ -27,12 +26,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
 export default {
   name: 'Education',
-  components: {
-    Header
-  },
   data () {
     return {
       name: 'Matthew\'s Diploma',

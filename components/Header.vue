@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="flex flex-col bg-black pb-2.5">
     <NavBar/>
     <div class="display">
       <img
@@ -7,9 +7,9 @@
         height=144
         width=144
         alt="Matthew Mahoney"
-        class="profilePic"
+        class="rounded-full"
       >
-      <h1>Matthew Mahoney</h1>
+      <h1 class="text-4xl font-bold">Matthew Mahoney</h1>
   </div>
   </div>
 </template>

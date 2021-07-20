@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <div class="container">
       <div v-if="$fetchState.pending">
         Loading...
@@ -32,14 +31,14 @@ export default {
       url: 'https://api.opendota.com/api/players/103266538/matches?limit=5&offset=0'
     }
   },
+  async fetch () {
+    this.games = await fetch(this.url).then(res => res.json())
+    this.heroes = await fetch('https://api.opendota.com/api/heroes').then(res => res.json())
+  },
   head () {
     return {
       title: this.title
     }
-  },
-  async fetch () {
-    this.games = await fetch(this.url).then(res => res.json())
-    this.heroes = await fetch('https://api.opendota.com/api/heroes').then(res => res.json())
   },
   fetchOnServer: false
 }

@@ -1,18 +1,15 @@
 <template>
-  <div id="myTopNav" class="topnav">
-    <div class="navigation">
-      <NuxtLink to="/">
-        Home page
-      </NuxtLink>
-      <NuxtLink to="/education">
-        Education
-      </NuxtLink>
-      <NuxtLink to="/interests">
-        Interests
-      </NuxtLink>
-    </div>
-    <div class="links">
-      <a href="https://www.linkedin.com/in/mahoney-matthew">
+  <span id="myTopNav" class="block w-full">
+    <NuxtLink to="/" class="float-left block text-white text-center px-4 py-1.5 no-underline text-lg hover:bg-gray-50 hover:text-black ease duration-300">
+      Home page
+    </NuxtLink>
+    <NuxtLink to="/education" class="float-left block text-white text-center px-4 py-1.5 no-underline text-lg hover:bg-gray-50 hover:text-black ease duration-300">
+      Education
+    </NuxtLink>
+    <NuxtLink to="/interests" class="float-left block text-white text-center px-4 py-1.5 no-underline text-lg hover:bg-gray-50 hover:text-black ease duration-300">
+      Interests
+    </NuxtLink>
+      <a href="https://www.linkedin.com/in/mahoney-matthew" class="float-right">
         <img
           src="~/assets/linkedin-logo.png"
           height="40"
@@ -20,7 +17,7 @@
         >
         </img>
       </a>
-      <a href="https://github.com/MahoneyMA">
+      <a href="https://github.com/MahoneyMA" class="float-right">
         <img
           src="~/assets/github-logo.png"
           height="40"
@@ -28,8 +25,7 @@
         >
         </img>
       </a>
-    </div>
-  </div>
+  </span>
 </template>
 
 <script>
@@ -39,9 +35,7 @@ export default {
 </script>
 
 <style>
-.topnav{
-  display: block;
-}
+
 .navigation a{
   float: left;
   display: block;
